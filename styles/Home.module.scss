@@ -3,12 +3,14 @@
     flex-direction: column;
 }
 
+.heroSection {
+    background-color: rgb(242, 242, 242);
+}
+
 .statsSection {
     margin-bottom: 2rem;
-    margin-top: -3rem;
-    padding: 5rem 1rem 2rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
     background-color: rgb(242, 242, 242);
-    border-bottom: 1px solid linear-gradient(to right, grey,black);
 }
 
 .aboutSection {

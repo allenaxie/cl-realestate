@@ -9,7 +9,7 @@ const Hero = () => {
                 <h3 className={classes.slogan}> Your most trusted realtor </h3>
             </div>
             <div className={classes.button}>
-                <button className={classes.cta}>Get started today!</button>
+                <button className={classes.cta}>Learn more</button>
             </div>
 
         </div>
