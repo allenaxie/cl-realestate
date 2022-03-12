@@ -78,7 +78,6 @@ const Navbar = () => {
                 <MenuItem 
                 key={page} 
                 onClick={handleCloseNavMenu}
-                className={page}
                 >
                   <Typography 
                   textAlign="center"
@@ -88,6 +87,7 @@ const Navbar = () => {
               ))}
             </Menu>
           </Box>
+          
           {/* XS screens */}
           <Typography
             variant="h6"
@@ -97,7 +97,10 @@ const Navbar = () => {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box 
+          sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
+          className={classes.menuItemContainer}
+          >
             {pages.map((page) => (
               <Button
                 key={page}

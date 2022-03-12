@@ -12,4 +12,10 @@
 
 .menuItem {
     font-size: 1.3rem;
+    height: 100%;
+
+    &:hover {
+        background-color: rgb(255, 253, 253);
+        color: var(--color-primary-tan-1);
+    }
 }
