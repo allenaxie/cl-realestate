@@ -25,7 +25,22 @@
     border:none;
     border-radius: 5%;
     letter-spacing: .5rem;
+    animation: moveInTop 1.2s ease-in-out forwards ;
 }
+
+@keyframes moveInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    80% {
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .cta {
     position: absolute;
@@ -45,6 +60,22 @@
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     transition: all .2s;
+    animation: moveInBottom 1s ease-in-out forwards .6s;
+    opacity: 0;
+
+    @keyframes moveInBottom {
+        0% {
+            opacity: 0;
+            transform: translateY(3rem);
+        }
+        80% {
+            transform: translateY(-1rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
     &:hover {
         background: linear-gradient(to left top, #7a7a69, #b1b19e);

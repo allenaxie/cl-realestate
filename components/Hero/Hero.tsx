@@ -1,7 +1,6 @@
 import classes from './Hero.module.scss';
 import {ImgCarousel} from '../../components';
 
-
 const Hero = () => {
     return  (
         <div className={classes.container}>
