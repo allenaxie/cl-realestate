@@ -75,12 +75,20 @@ const Navbar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem 
+                key={page} 
+                onClick={handleCloseNavMenu}
+                className={page}
+                >
+                  <Typography 
+                  textAlign="center"
+               
+                  >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+          {/* XS screens */}
           <Typography
             variant="h6"
             noWrap
@@ -95,6 +103,7 @@ const Navbar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                className={classes.menuItem}
               >
                 {page}
               </Button>

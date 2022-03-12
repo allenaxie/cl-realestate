@@ -16,8 +16,11 @@ const Home: NextPage = () => {
         <Navbar/>
       </header>
       <main className={classes.main}>
-        <div className="heroSection">hero section</div>
-
+        <div className="hero-section">hero section</div>
+        <div className="about-section">about section</div>
+        <div className="properties-section"> properties</div>
+        <div className="success-section">success stories</div>
+        <div className="contact-section"></div>
       </main>
       <footer>footer</footer>
     </div>
