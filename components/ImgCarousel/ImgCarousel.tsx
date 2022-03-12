@@ -23,7 +23,6 @@ const ImgCarousel = () => {
         <Carousel 
         className={classes.carousel}
         autoPlay
-        
         >
             {
                 images.map( (image ) => <img className={classes.photo} src={image.url} />)
