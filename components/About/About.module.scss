@@ -47,7 +47,7 @@
 
 .profileImg {
     width: 50%;
-    box-shadow: 1rem 1rem 2px 0 #a7dded;
+    box-shadow: 1rem 1rem 2px 0 var(--color-secondary-green-3);
     transition: all .3s;
 
     &:hover {

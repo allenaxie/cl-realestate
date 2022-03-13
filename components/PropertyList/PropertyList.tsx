@@ -1,8 +1,16 @@
 import classes from './PropertyList.module.scss';
 import PropertyListItem from '../PropertyListItem/PropertyListItem';
 import Grid from '@mui/material/Grid';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const PropertyList = () => {
+
+    useEffect(() => {
+        // all animations will take 2 seconds to complete
+        Aos.init({ duration: 2000 });
+    },[])
 
     const properties = [
         {
@@ -59,12 +67,12 @@ const PropertyList = () => {
     return (
         <Grid 
         container 
-        spacing={{ xs: 1, md:2}}
+        spacing={{ xs: 1, md:1}}
         columns={{ xs:12, md:12 }}
         className={classes.grid}
         >
             {properties.map(property => 
-            (<Grid item xs={12} md={6} className={classes.gridItem}>
+            (<Grid item xs={12} md={6} className={classes.gridItem} data-aos="zoom-in">
                 <PropertyListItem property={property}/>
             </Grid>)
             )}

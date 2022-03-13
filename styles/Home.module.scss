@@ -4,16 +4,20 @@
 }
 
 .heroSection {
-    background-color: rgb(242, 242, 242);
+    background-color: var(--color-secondary-green-3);
 }
 
 .statsSection {
     margin-bottom: 2rem;
     padding: 3rem 1rem 2rem 1rem;
-    background-color: rgb(242, 242, 242);
+    background-color: var(--color-secondary-green-3);
 }
 
 .aboutSection {
     margin: 5rem 2rem;
 }
 
+.propertiesSection {
+    margin-top: 15rem;
+    background-color:var(--color-primary-tan-3);
+}
