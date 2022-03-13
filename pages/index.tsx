@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import classes from '../styles/Home.module.scss';
-import {Navbar, Hero, Stats, About, PropertyList, ReviewList} from '../components';
+import {Navbar, Hero, Stats, About, PropertyList, ReviewList, ContactForm} from '../components';
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +30,9 @@ const Home: NextPage = () => {
         <section className={classes.reviewsSection}>
           <ReviewList/>
         </section>
-        {/* <section className="contact-section"></section>  */}
+        <section className={classes.contactSection}>
+          <ContactForm/>
+        </section>   
       </main>
       {/* <footer>footer</footer> */}
     </div>
