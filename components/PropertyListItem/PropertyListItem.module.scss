@@ -1,0 +1,16 @@
+.card {
+    margin: 3rem 0;
+    width: 60%;
+    box-shadow: var(--shadow-dark);
+}
+
+.price {
+    padding: 1rem;
+    text-align:end;
+    color:rgb(91, 91, 91);
+    font-weight: 550;
+}
+
+.description {
+    font-size: 1.3rem;
+}
