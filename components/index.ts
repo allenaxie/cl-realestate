@@ -4,4 +4,4 @@ export {default as Hero} from './Hero/Hero';
 export {default as Stats} from './Stats/Stats';
 export {default as About} from './About/About';
 export {default as PropertyList} from './PropertyList/PropertyList';
-export {default as Reviews} from './Reviews/Reviews';
+export {default as ReviewList} from './ReviewList/ReviewList';
