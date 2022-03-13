@@ -4,6 +4,8 @@ import classes from '../styles/Home.module.scss';
 import {Navbar, Hero, Stats, About, PropertyList, ReviewList, ContactForm} from '../components';
 
 const Home: NextPage = () => {
+
+  
   return (
     <div className={classes.container}>
       <Head>
