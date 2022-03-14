@@ -1,0 +1,50 @@
+.container {
+    padding: 2rem;
+}
+
+.logo,
+.socialMedia,
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContent {
+    font-size: 5rem;
+    color: white;
+    padding: 2rem;
+}
+
+.contact {
+    flex-direction: column;
+    align-items: center;
+}
+
+.linkedinIcon,
+.phoneIcon,
+.facebookIcon,
+.emailIcon {
+    width: 3rem;
+    height: 3rem;
+    fill: white;
+}
+
+.linkedinIcon {
+    margin-right: 5rem;
+}
+
+.phoneContainer, .emailContainer {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+        margin: 1rem 0;
+    }
+}
+
+.phone,.email {
+    font-size: 2rem;
+    color: white;
+    margin-left: 1.3rem;
+}

@@ -16,7 +16,7 @@ const ContactForm = ({handleSubmit, openNotification}) => {
 
     return (
         <>
-            <Typography className={classes.heading} data-aos="fade">Contact Me</Typography>
+            <Typography className={classes.heading} data-aos="fade">Get In Touch</Typography>
             <form onSubmit={handleSubmit} className={classes.form} data-aos="fade-up">
                 <TextField
                 label="Name"

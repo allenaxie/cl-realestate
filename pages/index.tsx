@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           />
         </section>   
       </main>
-      <footer className={classes.fotter}>
+      <footer className={classes.footerSection}>
         <Footer/>
       </footer>
     </div>
