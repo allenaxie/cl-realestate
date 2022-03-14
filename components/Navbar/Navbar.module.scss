@@ -1,13 +1,17 @@
 .appbar {
     background-color: #cb997e;
+    
 }
 
 .container {
     padding: 0 1rem;
+    position: sticky;
+    top:0;
 }
 
 .logo {
     font-size: 1.6rem;
+    cursor: pointer;
 }
 
 .menuItem {

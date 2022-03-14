@@ -11,19 +11,49 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Link from 'next/link';
 import classes from './Navbar.module.scss';
+import { useRouter } from 'next/router';
 
 
-const pages = ['About Me', 'Properties', 'Success stories', 'Contact Me'];
+
+const pages = [
+  {
+    label:'About',
+    key:'about-me'
+  }, 
+  {
+    label: 'Properties', 
+    key: 'properties',
+  },
+  {
+    label: 'Reviews', 
+    key: 'reviews',
+  },
+  {
+    label: 'Contact',
+    key: 'contact-me',
+  }
+];
 
 const Navbar = () => {
+
+  const router= useRouter();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (evt) => {
+    evt.preventDefault();
+    let key = evt.target.innerText.toLowerCase()
+    const location = document.getElementById(`${key}`)?.offsetTop;
+
+    window.scrollTo({
+      left:0,
+      top: location - 70,
+    })
     setAnchorElNav(null);
   };
 
@@ -35,16 +65,19 @@ const Navbar = () => {
       className={classes.container}
       maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-            className={classes.logo}
-          >
-            LOGO
-          </Typography>
+          <Link href="#home" className={classes.logo}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+              className={classes.logo}
+            >
+              LOGO
+            </Typography>
+          </Link>
 
+          {/* burger menu */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -76,40 +109,44 @@ const Navbar = () => {
             >
               {pages.map((page) => (
                 <MenuItem 
-                key={page} 
+                key={page.key} 
                 onClick={handleCloseNavMenu}
                 >
-                  <Typography 
-                  textAlign="center"
-               
-                  >{page}</Typography>
+                    <Typography 
+                    textAlign="center"
+                
+                    >{page.label}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           
-          {/* XS screens */}
+        <Link href="#home">
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+              LOGO
+            
           </Typography>
+        </Link>
+
+                {/* normal nav bar */}
           <Box 
           sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
           className={classes.menuItemContainer}
           >
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-                className={classes.menuItem}
-              >
-                {page}
-              </Button>
+                <Button
+                  key={page.key}
+                  onClick= {(evt) => handleCloseNavMenu(evt)}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  className={classes.menuItem}
+                >
+                  {page.label}
+                </Button>
             ))}
           </Box>
         </Toolbar>
