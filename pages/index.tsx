@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import classes from '../styles/Home.module.scss';
-import {Navbar, Hero, Stats, About, PropertyList, ReviewList, ContactForm} from '../components';
+import {Navbar, Hero, Stats, About, PropertyList, ReviewList, ContactForm, Footer} from '../components';
 import { useForm, ValidationError } from '@formspree/react';
 import { useEffect, useState } from 'react';
 import {Snackbar} from '@mui/material';
@@ -22,7 +22,6 @@ const Home: NextPage = () => {
   
     function openNotification () {
       setOpen(true);
-      
     }
 
   return (
@@ -61,7 +60,9 @@ const Home: NextPage = () => {
           />
         </section>   
       </main>
-      {/* <footer>footer</footer> */}
+      <footer className={classes.fotter}>
+        <Footer/>
+      </footer>
     </div>
   )
 }
