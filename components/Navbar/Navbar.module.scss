@@ -1,16 +1,22 @@
 .appbar {
     background-color: #cb997e;
+    position: fixed;
+    top:0;
     
 }
 
 .container {
     padding: 0 1rem;
-    position: sticky;
-    top:0;
+    
 }
 
 .logo {
     font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.mobileLogo {
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
@@ -22,4 +28,13 @@
         background-color: rgb(255, 253, 253);
         color: var(--color-primary-tan-1);
     }
+}
+
+.burgerIcon {
+    font-size: 3rem;
+}
+
+.burgerText {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', 'sans serif';
 }

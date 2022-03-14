@@ -46,13 +46,14 @@
 }
 
 .profileImg {
-    width: 50%;
+    width: 40rem;
     box-shadow: 1rem 1rem 2px 0 var(--color-secondary-green-3);
     transition: all .3s;
 
     &:hover {
         transform: scale(1.05);
     }
+
 }
 
 .cta {

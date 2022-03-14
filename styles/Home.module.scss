@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .navbar {
@@ -10,13 +11,24 @@
 }
 
 .heroSection {
-    background-color: var(--color-secondary-green-3);
+    // background-color: var(--color-secondary-green-3);
+
+    // @media only screen and (max-width: 1150px) {
+    //     height: min-content;
+    // }
+    height: 100%;
 }
 
 .statsSection {
     margin-bottom: 2rem;
     padding: 3rem 1rem 2rem 1rem;
     background-color: var(--color-secondary-green-3);
+
+    @media only screen and (max-width: 1200px) {
+        padding: 2rem;
+        margin-top: -1rem;
+
+    }
 }
 
 .aboutSection {

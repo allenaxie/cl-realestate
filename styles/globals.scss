@@ -18,7 +18,11 @@
   --shadow-light: 0 2rem 5rem rgba(0,0,0,0.06);
 
   --line: 1px solid var(--color-light-grey-1);
+  
 }
+
+$bp-xxl: 81.25em; //1300px
+$bp-xl: 75em; //1200px
 
 html,
 body {
@@ -27,6 +31,15 @@ body {
   font-size: 62.5%;
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 55%;
+}
+  @media only screen and (max-width: 1020px) {
+    font-size: 52%;
+}
+  
+  
 }
 
 * {

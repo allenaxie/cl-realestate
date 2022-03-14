@@ -17,15 +17,15 @@ const ReviewListItem = (props:ReviewListItemProps) => {
 
     return (    
         <Card className={classes.card} data-aos="flip-up">
-            <Grid container spacing={{xs:1}} columns={{xs:8}}>
-                <Grid item xs={3} className={classes.avatarContainer}>
+            <Grid container columns={{xs:12}} className={classes.container}>
+                <Grid item xs={4} className={classes.avatarContainer}>
                     <Avatar 
                     src={props.review.image}
                     alt="profile image"
                     className={classes.avatar}
                     />
                 </Grid>
-                <Grid item xs={5} className={classes.contentContainer}>
+                <Grid item xs={8} className={classes.contentContainer}>
                     <CardContent className={classes.content}>
                         <span className={classes.name}>
                             {props.review.name}

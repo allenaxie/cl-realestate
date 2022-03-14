@@ -46,6 +46,10 @@ const Navbar = () => {
   };
 
   const handleCloseNavMenu = (evt) => {
+    setAnchorElNav(null);
+  };
+
+  const handleNavigate = (evt) => {
     evt.preventDefault();
     let key = evt.target.innerText.toLowerCase()
     const location = document.getElementById(`${key}`)?.offsetTop;
@@ -55,7 +59,7 @@ const Navbar = () => {
       top: location - 70,
     })
     setAnchorElNav(null);
-  };
+  }
 
   return (
     <AppBar 
@@ -87,7 +91,7 @@ const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon className={classes.burgerIcon}/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -110,11 +114,11 @@ const Navbar = () => {
               {pages.map((page) => (
                 <MenuItem 
                 key={page.key} 
-                onClick={handleCloseNavMenu}
+                onClick={handleNavigate}
                 >
                     <Typography 
                     textAlign="center"
-                
+                    className={classes.burgerText}
                     >{page.label}</Typography>
                 </MenuItem>
               ))}
@@ -127,6 +131,7 @@ const Navbar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            className={classes.mobileLogo}
           >
               LOGO
             
@@ -141,7 +146,7 @@ const Navbar = () => {
             {pages.map((page) => (
                 <Button
                   key={page.key}
-                  onClick= {(evt) => handleCloseNavMenu(evt)}
+                  onClick= {(evt) => handleNavigate(evt)}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                   className={classes.menuItem}
                 >
