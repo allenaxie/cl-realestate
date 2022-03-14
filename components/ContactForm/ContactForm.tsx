@@ -6,17 +6,8 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 
 
-const ContactForm = () => {
-    const [open, setOpen] = useState(false);
-
-    function handleClose () {
-        setOpen(false);
-    }
-
-    const [state, handleSubmit] = useForm("mdobdoon");
-    if (state.succeeded) {
-        setOpen(true);
-    }
+const ContactForm = ({handleSubmit, openNotification}) => {
+    
 
     useEffect(() => {
         // all animations will take 2 seconds to complete
@@ -49,16 +40,11 @@ const ContactForm = () => {
                 required
                 className={classes.message}
                 />
-                <button type="submit" disabled={state.submitting} value="Submit" className={classes.submitBtn}>
+                <button type="submit" value="Submit" className={classes.submitBtn} onClick={openNotification}>
                     Submit
                 </button>
             </form>
-            <Snackbar
-            open={open}
-            autoHideDuration={5000}
-            onClose={handleClose}
-            message="Message sent successfully!"
-            />
+            
         </>
 
     )
