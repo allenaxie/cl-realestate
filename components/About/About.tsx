@@ -10,6 +10,14 @@ const About = () => {
         Aos.init({ duration: 2000 });
     },[])
 
+    function handleClick () {
+        let location = document.getElementById('contact')?.offsetTop;
+
+        window.scrollTo({
+            top: location - 70
+        })
+    }
+
     return (
         <div className={classes.container}>
             <div className={classes.col1}>
@@ -22,7 +30,7 @@ const About = () => {
                     </span>
                 </div>
                 <div data-aos="fade-up" className={classes.ctaContainer}>
-                    <button className={classes.cta}>Connect with me</button>
+                    <button className={classes.cta} onClick={handleClick}>Connect with me</button>
                 </div>
             </div>
             <div className={classes.col2}>
