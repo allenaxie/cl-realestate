@@ -20,8 +20,8 @@ const ReviewList = () =>  {
 
     return (
         <>
-        {reviews.map(review => 
-            <ReviewListItem review={review} />
+        {reviews.map((review,idx) => 
+            <ReviewListItem review={review} key={idx}/>
             )}
         </>
     )

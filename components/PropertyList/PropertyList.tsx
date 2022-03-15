@@ -70,9 +70,9 @@ const PropertyList = () => {
         columns={{ xs:12, md:12 }}
         className={classes.grid}
         >
-            {properties.map(property => 
-            (<Grid item xs={12} md={6} className={classes.gridItem} data-aos="zoom-in">
-                <PropertyListItem property={property}/>
+            {properties.map((property,idx) => 
+            (<Grid item xs={12} md={6} className={classes.gridItem} data-aos="zoom-in" key={`${idx}-grid`}>
+                <PropertyListItem property={property} key={idx}/>
             </Grid>)
             )}
         </Grid>

@@ -45,20 +45,23 @@ const Navbar = () => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = (evt) => {
+  const handleCloseNavMenu = (evt:MouseEvent) => {
     setAnchorElNav(null);
   };
 
-  const handleNavigate = (evt) => {
+  const handleNavigate = (evt:React.SyntheticEvent) => {
     evt.preventDefault();
-    let key = evt.target.innerText.toLowerCase()
+    let click = evt.target as HTMLElement;
+    let key = click.innerText.toLowerCase()
     const location = document.getElementById(`${key}`)?.offsetTop;
 
-    window.scrollTo({
-      left:0,
-      top: location - 70,
-    })
-    setAnchorElNav(null);
+    if (location) {
+      window.scrollTo({
+        left:0,
+        top: location - 70,
+      })
+      setAnchorElNav(null);
+    }
   }
 
   return (
@@ -69,7 +72,7 @@ const Navbar = () => {
       className={classes.container}
       maxWidth="xl">
         <Toolbar disableGutters>
-          <Link href="#home" className={classes.logo}>
+          <Link href="#home">
             <Typography
               variant="h6"
               noWrap

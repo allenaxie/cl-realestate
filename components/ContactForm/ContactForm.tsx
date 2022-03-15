@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 
 
-const ContactForm = ({handleSubmit, openNotification}) => {
+const ContactForm = ({handleSubmit, openNotification}:any) => {
     
 
     useEffect(() => {

@@ -6,12 +6,14 @@ import Link from 'next/link';
 const Hero = () => {
 
     const handleClick = () => {
-        const location = document.getElementById('about')?.offsetTop;
-    
-        window.scrollTo({
-          left:0,
-          top: location - 120,
-        })
+        let location = document.getElementById('about')?.offsetTop;
+        
+        if (location) {
+            window.scrollTo({
+              left:0,
+              top: location - 120,
+            })
+        }
       };
 
     return  (

@@ -26,7 +26,7 @@ const ImgCarousel = () => {
         indicators={false}
         >
             {
-                images.map( (image ) => <img className={classes.photo} src={image.url} />)
+                images.map( (image ) => <img className={classes.photo} src={image.url} key={image.name}/>)
             }
         </Carousel>
     )
