@@ -1,43 +1,34 @@
 .container {
-    position: relative;
-    height: 100vh;
+    position: relative !important;
+}
 
-    @media only screen and (max-width: 1200px) {
-        height: 100%;
+.contentContainer {
+    position: absolute !important;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    text-align: center !important;
+    top: 30%;
+    z-index: 1;
+
+    @media only screen and (max-width:490px) {
+        top: 25%;
     }
 }
 
-.text {
-    box-shadow: var(--shadow-dark);
-}
-
 .slogan {
-    position: absolute;
-    margin: 0 auto;
-    padding: 1rem;
-    top: 25%;
-    left: 20%;
     font-size: 5.5rem;
-    z-index: 1;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px rgb(0, 0, 0),
     2px 2px 4px rgb(111, 109, 109),
     4px 4px 6px rgb(0, 0, 0)
     ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border:none;
     border-radius: 5%;
     letter-spacing: .5rem;
     text-transform: uppercase;
     animation: moveInTop 1.2s ease-in-out forwards ;
 
-
-    @media only screen and (max-width: 1240px) {
-        top: 30%;
-        left: 15%;
-    }
     @media only screen and (max-width: 1010px) {
         font-size: 4.7rem;
     }
@@ -47,7 +38,6 @@
     @media only screen and (max-width: 750px) {
         font-size: 4rem;
     }
-
 }
 
 @keyframes moveInTop {
@@ -65,11 +55,6 @@
   }
 
 .cta {
-    position: absolute;
-    margin: 0 auto;
-    top: 45%;
-    left: 41%;
-    z-index: 1;
     width: 25rem;
     height: 5rem;
     border-radius: 5px;
@@ -85,10 +70,7 @@
     animation: moveInBottom 1s ease-in-out forwards .6s;
     opacity: 0;
 
-    @media only screen and (max-width: 1240px) {
-        top: 50%;
-        left: 40%;
-    }
+  
     @media only screen and (max-width: 750px) {
         font-size: 1.7rem;
         width: 22rem;

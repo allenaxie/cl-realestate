@@ -11,22 +11,20 @@
 }
 
 .heroSection {
-    // background-color: var(--color-secondary-green-3);
-
-    // @media only screen and (max-width: 1150px) {
-    //     height: min-content;
-    // }
-    height: 100%;
+    height: 100vh;
 }
 
 .statsSection {
     margin-bottom: 2rem;
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 1rem;
     background-color: var(--color-secondary-green-3);
 
     @media only screen and (max-width: 1200px) {
         padding: 2rem;
         margin-top: -1rem;
+    }
+    @media only screen and (max-width: 1050px) {
+
     }
     @media only screen and (max-width:800px) {
         padding-top: 5rem;

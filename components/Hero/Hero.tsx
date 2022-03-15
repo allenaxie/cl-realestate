@@ -17,10 +17,8 @@ const Hero = () => {
     return  (
         <div className={classes.container}>
             <ImgCarousel/>
-            <div className={classes.text}>
+            <div className={classes.contentContainer}>
                 <h3 className={classes.slogan}> Your most trusted realtor </h3>
-            </div>
-            <div className={classes.button}>
                 <button className={classes.cta} onClick={handleClick}>
                         Learn more
                 </button>
