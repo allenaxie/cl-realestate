@@ -25,4 +25,4 @@ CL-real-estate is a fully responsive website built with React, Sass, Material UI
 - Material UI
 - Formspree
 
-Link to Deployed App -- <https://cl-real-estate.netlify.app/>
+<a href="https://cl-real-estate.netlify.app/" target="_blank"> Click to view application! </a>
