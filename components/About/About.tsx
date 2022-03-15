@@ -11,11 +11,13 @@ const About = () => {
     },[])
 
     function handleClick () {
-        let location = document.getElementById('contact')?.offsetTop;
+        let location:number | undefined = document.getElementById('contact')?.offsetTop;;
+        if (location) {
+            window.scrollTo({
+                top: location - 70
+            })
+        }
 
-        window.scrollTo({
-            top: location - 70
-        })
     }
 
     return (
