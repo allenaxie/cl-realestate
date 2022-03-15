@@ -3,9 +3,14 @@
 
     &:first-child {
         height: 100vh;
+
     }
 }
 
 .photo {
     width: 100%;
+
+    @media only screen and (max-width: 750px) {
+        height: 100%;
+    }
 }

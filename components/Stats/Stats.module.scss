@@ -11,4 +11,11 @@
     align-items: center;
     flex: 0 0 50%;
     font-size: 2.5rem;
+
+    @media only screen and (max-width:800px) {
+        padding-top: 1rem;
+        font-size: 2rem;
+    }
 }
+
+

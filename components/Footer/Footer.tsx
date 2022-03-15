@@ -5,16 +5,16 @@ import { LinkedIn, Phone, Facebook, Email } from '@mui/icons-material';
 const Footer = () => {
     return (
         <Grid container spacing={1} className={classes.container}>
-            <Grid item md={4} className={classes.logo}>
+            <Grid item xs={4} className={classes.logo}>
                 <span className={classes.logoContent}>
                     LOGO
                 </span>
             </Grid>
-            <Grid item md={4} className={classes.socialMedia}>
+            <Grid item xs={4} className={classes.socialMedia}>
                 <LinkedIn className={classes.linkedinIcon}/>
                 <Facebook className={classes.facebookIcon}/>
             </Grid>
-            <Grid item md={4} className={classes.contact}>
+            <Grid item xs={4} className={classes.contact}>
                 <div className={classes.phoneContainer}>
                     <Phone className={classes.phoneIcon}/> 
                     <span className={classes.phone}>1 (415) 999-9999</span>

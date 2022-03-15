@@ -11,9 +11,14 @@
     justify-content: center;
     margin: 3rem 0;
     width: 50%;
+    min-width: 400px;
     padding: 5rem 8rem 3rem 8rem;
     background-color: white;
     border-radius: 10px;
+
+    @media only screen and (max-width:900px) {
+        width: 65%;
+    }
 
     & > * {
         margin-bottom: 2rem;

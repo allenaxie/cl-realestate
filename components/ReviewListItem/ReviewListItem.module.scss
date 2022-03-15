@@ -2,6 +2,7 @@
     padding: 4rem 8rem 2rem 8rem;
     box-shadow: var(--shadow-dark);
     width: 50%;
+    min-width: 400px;
     margin: 3rem 0;
 
     &:first-child {
@@ -10,6 +11,10 @@
 
     &:last-child {
         margin-bottom: 8rem;
+    }
+
+    @media only screen and (max-width: 900px) {
+        width: 75%;
     }
 }
 

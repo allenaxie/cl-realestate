@@ -44,6 +44,9 @@
     @media only screen and (max-width: 900px) {
         font-size: 4.5rem;
     }
+    @media only screen and (max-width: 750px) {
+        font-size: 4rem;
+    }
 
 }
 
@@ -85,6 +88,11 @@
     @media only screen and (max-width: 1240px) {
         top: 50%;
         left: 40%;
+    }
+    @media only screen and (max-width: 750px) {
+        font-size: 1.7rem;
+        width: 22rem;
+        height: 4rem;
     }
 
     @keyframes moveInBottom {

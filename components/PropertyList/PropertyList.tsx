@@ -67,7 +67,6 @@ const PropertyList = () => {
     return (
         <Grid 
         container 
-        spacing={{ xs: 1, md:1}}
         columns={{ xs:12, md:12 }}
         className={classes.grid}
         >

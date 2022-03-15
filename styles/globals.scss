@@ -21,9 +21,6 @@
   
 }
 
-$bp-xxl: 81.25em; //1300px
-$bp-xl: 75em; //1200px
-
 html,
 body {
   padding: 0;
@@ -38,7 +35,9 @@ body {
   @media only screen and (max-width: 1020px) {
     font-size: 52%;
 }
-  
+  @media only screen and (max-width: 800px) {
+    font-size: 46%;
+}
   
 }
 
